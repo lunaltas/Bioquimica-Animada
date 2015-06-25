@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Bioquímica Animada</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.css">
+    <!-- It should be included After main Framework7 styles -->
+    <link rel="stylesheet" href="css/framework7.themes.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Conteudo do sumário no painel esquerdo-->
+   <div class="panel panel-left panel-reveal layout-dark">
+      <div class="content-block-title"><b>Sumário</b></div>
+      <div class="list-block">
+        <ul>
+          <li><a href="index.html" class="close-panel item-link"> 
+              <div class="item-content">
+                <div class="item-media"><i class="icon apresent"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title color-white">Apresentação</div>
+                </div>
+              </div></a></li>
+          <li><a href="capitulo1.html" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon cap1"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title color-green">1. Catabolismo</div>
+                </div>
+              </div></a></li>
+          <li><a href="capitulo2.html" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon cap2"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title color-orange">2. Digestão</div>
+                </div>
+              </div></a></li>
+          <li><a href="capitulo3.html" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon cap3"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title color-petrolio">3. Glicólise</div>
+                </div>
+              </div></a></li>
+          <li><a href="capitulo4.html" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon cap4"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title color-pink">4. Ciclo de Krebs</div>
+                </div>
+              </div></a></li>
+          <li><a href="capitulo5.html" class="close-panel item-link">
+              <div class="item-content">
+                <div class="item-media"><i class="icon cap5"></i></div>
+                <div class="item-inner"> 
+                  <div class="item-title color-yellow">5. Fosforilação</div>
+                </div>
+              </div></a></li>
+        </ul>
+
+        <div class="content-block-title"><b>Opções</b></div>
+        <div class="list-block">
+          <ul>
+            <li><a href="notes.html" class="close-panel item-link"> 
+                <div class="item-content">
+                  <div class="item-media"><i class="icon apresent"></i></div>
+                  <div class="item-inner"> 
+                    <div class="item-title color-white">Ver Anotações</div>
+                  </div>
+                </div></a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover layout-dark">
+      <div class="content-block">
+          <div class="content-block-title"><b>Menu Ajuda</b></div>
+          <div class="list-block">
+            <ul>
+              <li><a href="index.html" class="close-panel item-link" id="mail"> 
+                  <div class="item-content">
+                    <div class="item-media"><i class="icon cap2"></i></div>
+                    <div class="item-inner"> 
+                      <div class="item-title">Enviar Email</div>
+                    </div>
+                  </div>
+                  </a>
+              </li>
+              <li><a href="dicas.html" class="close-panel item-link" id="dicas"> 
+                  <div class="item-content">
+                    <div class="item-media"><i class="icon cap3"></i></div>
+                    <div class="item-inner"> 
+                      <div class="item-title">Dicas</div>
+                    </div>
+                  </div>
+                  </a>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <!-- Right link contains only icon - additional "icon-only" class
+              <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>-->
+            </div>
+            <!-- We have home navbar without left link-->
+            <div class="center sliding">Apresentação</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class-->
+              <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content hide-bars-on-scroll">
+              <div class="content-block-title">Apresentação</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <center><h1>Bioquímica animada</h1><h3>Aprendendo através de perguntas</h3></center> 
+                  <p id="0_1">Para muitos estudantes, o primeiro contato com o conteúdo de bioquímica não é uma experiência estimulante, talvez pela complexidade dos assuntos ou pela falta de um contexto prático. Isso gera resistência por parte do aluno, aumentando a dificuldade em entender a ideia central por trás das fórmulas e rotas bioquímicas.
+                  </p>
+                  <p id="0_2">Este aplicativo consiste basicamente em um conjunto de perguntas e respostas de cunho prático a respeito dos conteúdos básicos da bioquímica. O aplicativo traz textos em linguagem coloquial e figuras e esquemas que facilitam o entendimento dos conceitos básicos.
+                  </p>
+                  <p id="0_3">Esse banco de perguntas e figuras foi criado por uma equipe de docentes e discentes da Universidade Federal do Rio Grande do Norte, e o desenvolvimento do aplicativo foi financiado pelo Edital de Monitoria e Programa de Melhoria da Qualidade de Ensino - 2014 (MONITORIA E PAMQEG) – UFRN.  As perguntas estão baseadas nos principais assuntos abordados pelos cursos da área biológica e em uma revisão bibliográfica detalhada sobre casos clínicos, processos bioquímicos, doenças metabólicas e curiosidades relacionadas a esses temas.
+                  </p>
+                  <p id="0_4">Professores: </p>
+                  <ul> 
+                    <li>Prof. Daniel Carlos Ferreira Lanza (Coordendador)</li>
+                    <li>Prof. Suely Ferreira Chavante</li>
+                    <li>Prof. Elizeu Antunes dos Santos</li>
+                    <li>Departamento de Bioquímica, Centro de Biociências -  UFRN</li> 
+                    <li>Prof. Sérgio Ricardo Fernandes de Araújo </li>
+                    <li>Escola Multicampi de Ciências Médicas - UFRN</li>
+                  </ul>
+                  <p id="0_5">Estudantes:</p>
+                  <ul> 
+                    <li>Laíse Diana dos Santos Brandão (Graduação em Biomedicina – UFRN)</li>
+                    <li>Wydemberg José de Araújo (Graduação em Biologia – UFRN)</li>
+                    <li>Suellen Nayara Alves Lucena (Graduação em Biologia – UFRN)</li>
+                    <li>Elielson Bezerra da Silva Júnior (Graduação em Biologia – UFRN)</li>
+                    <li>Renato Bezerra Jerônimo (Graduação em Biologia – UFRN)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar tabbar-labels">
+            <div class="toolbar-inner">
+                <a href="#" class="tab-link icon-only open-panel">
+                    <i class="icon sumario"></i>
+                    <span class="tabbar-label">Sumário</span>
+                </a>
+                <a href="#" class="tab-link" id="mark_page">
+                    <i class="icon mark" id="icon_mark_page"></i>
+                    <span class="tabbar-label" id="label_mark_page">Marcar Página</span>
+                </a>
+                <a href="#" data-panel="right" class="tab-link open-panel">
+                    <i class="icon cog"></i>
+                    <span class="tabbar-label">Help</span>
+                </a>
+            </div>
+        </div>
+
+    <script type = "text/javascript" src="cordova.js"> </script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>
